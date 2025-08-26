@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Balade Historique Dunkerque</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin:0; overflow:hidden;">
+  <a-scene embedded arjs="sourceType: webcam; gpsMinAccuracy: 20">
+    
+    <!-- POINT 1 -->
+    <a-image src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Fisherman_with_net.jpg" 
+             scale="5 5 5"
+             gps-entity-place="latitude:51.0382; longitude:2.3760"
+             look-at="[gps-camera]"
+             animation="property: opacity; from:0; to:1; dur:1500">
+    </a-image>
+    <a-text value="Salut ! Trouve le mot du marché 1920" 
+            gps-entity-place="latitude:51.0382; longitude:2.3760"
+            scale="5 5 5">
+    </a-text>
+
+    <!-- POINT 2 -->
+    <a-image src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Beffroi_de_Dunkerque.JPG" 
+             scale="10 10 10"
+             gps-entity-place="latitude:51.0315; longitude:2.3765"
+             look-at="[gps-camera]"
+             animation="property: opacity; from:0; to:1; dur:1500">
+    </a-image>
+    <a-text value="Le Beffroi détruit pendant la guerre" 
+            gps-entity-place="latitude:51.0315; longitude:2.3765"
+            scale="5 5 5">
+    </a-text>
+
+    <!-- POINT 3 -->
+    <a-image src="https://upload.wikimedia.org/wikipedia/commons/2/27/Malo-les-Bains_plage.jpg" 
+             scale="12 12 12"
+             gps-entity-place="latitude:51.0430; longitude:2.3920"
+             look-at="[gps-camera]"
+             animation="property: opacity; from:0; to:1; dur:1500">
+    </a-image>
+    <a-text value="Question : Quel hôtel disparu se trouvait ici ?" 
+            gps-entity-place="latitude:51.0430; longitude:2.3920"
+            scale="5 5 5">
+    </a-text>
+
+    <!-- POINT 4 -->
+    <a-image src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Dunkerque_port.jpg" 
+             scale="15 15 15"
+             gps-entity-place="latitude:51.0345; longitude:2.3700"
+             look-at="[gps-camera]"
+             animation="property: opacity; from:0; to:1; dur:1500">
+    </a-image>
+    <a-text value="Indice final : Code du port à retrouver" 
+            gps-entity-place="latitude:51.0345; longitude:2.3700"
+            scale="5 5 5">
+    </a-text>
+
+    <a-entity gps-camera rotation-reader></a-entity>
+  </a-scene>
+</body>
+</html>
